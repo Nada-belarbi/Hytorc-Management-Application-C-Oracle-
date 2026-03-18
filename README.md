@@ -122,12 +122,6 @@ The application processes calibration files:
 
 - Excel Export
 
-Excel files are generated using ClosedXML:
-
-# tool list
-
-metadata (type, supplier, date, status)
-
 ## Authentication
 
 Uses Active Directory (LDAP):
