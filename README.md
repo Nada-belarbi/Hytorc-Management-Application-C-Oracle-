@@ -34,7 +34,7 @@ It provides features for:
 </appSettings>
 ```
 
-##Database Setup
+## Database Setup
 
 Run the SQL script:
 ```
@@ -42,19 +42,19 @@ database/01_create_hytorc_tables.sql
 ```
 This script:
 
-creates all required tables
+- creates all required tables
 
-defines primary and foreign keys
+- defines primary and foreign keys
 
-is sanitized for public use
+- is sanitized for public use
 
 If the script contains SCHEMA_NAME, you can:
 
-replace it with your Oracle schema
+- replace it with your Oracle schema
 
-or remove it to use your default schema
+- or remove it to use your default schema
 
-##Oracle Connection
+## Oracle Connection
 
 The application connects to Oracle using Oracle Managed Data Access.
 
@@ -70,17 +70,17 @@ Password=PASSWORD;
 ```
 This file is not included in the repository for security reasons.
 
-##Database Access & SQL
+## Database Access & SQL
 
 The application uses a dedicated class: Connect_db.
 
 Main features:
 
-centralized connection management
+- centralized connection management
 
-parameterized SQL queries
+- parameterized SQL queries
 
-separation between SELECT and UPDATE operations
+- separation between SELECT and UPDATE operations
 
 Example queries
 
@@ -98,37 +98,37 @@ COUNT:
 ```
 SELECT COUNT(*) FROM EPE_UUM_HYTORC_CLE WHERE NUMERO = :num
 ```
-###Good practices
+## Good practices
 
-use of parameters (:param)
+- use of parameters (:param)
 
-no raw SQL concatenation
+- no raw SQL concatenation
 
-controlled connection handling
+- controlled connection handling
 
-error logging
+- error logging
 
-File Processing
+- File Processing
 
 The application processes calibration files:
 
-reads text files
+- reads text files
 
-extracts data
+- extracts data
 
-updates database
+- updates database
 
-archives processed files
+- archives processed files
 
-Excel Export
+- Excel Export
 
 Excel files are generated using ClosedXML:
 
-tool list
+# tool list
 
 metadata (type, supplier, date, status)
 
-##Authentication
+## Authentication
 
 Uses Active Directory (LDAP):
 ```
@@ -136,26 +136,26 @@ DirectoryEntry("LDAP://domain", username, password)
 ```
 This feature requires a corporate environment.
 
-##Limitations
+## Limitations
 
-This project was originally developed in an enterprise context:
+- This project was originally developed in an enterprise context:
 
-requires Oracle database
+- requires Oracle database
 
-uses LDAP authentication
+- uses LDAP authentication
 
-depends on external configuration
+- depends on external configuration
 
-This version is adapted for demonstration purposes.
+- This version is adapted for demonstration purposes.
 
-##Key Features
+## Key Features
 
-Oracle database integration
+- Oracle database integration
 
-secure SQL queries (parameterized)
+- secure SQL queries (parameterized)
 
-file processing automation
+- file processing automation
 
-audit logging system
+- audit logging system
 
-configurable application
+- configurable application
